@@ -1,0 +1,274 @@
+@import url('https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Anton&family=Cinzel:wght@400;500;600;700;800;900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+:root {
+    --bg-grey:#9b9999;
+    --bg-dark: #202020;
+
+    --card-hero: #0f0f0f;
+    --card-txt-gold: #fb8500;
+
+    --ft-bg: #252422;
+    --ft-bg-light: #252422d8;
+    --ft-bg-green: #4f772d;
+    --ft-bg-btn: #e07a5f;
+
+    --bg-products: rgb(26, 24, 24);
+
+    --bg-item: #0f0f0fc5;
+}
+
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    &::selection {
+        background: var(--ft-bg-green);
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+    scroll-padding: 5.8rem;
+}
+
+::-webkit-scrollbar {
+    display: none;
+}
+
+
+/* -------hovers------- */
+
+/*---Hero Section---*/
+.hero-card:hover.hero-card .hero-logo {
+    opacity: 1;
+    text-shadow: #fb8600 1px 0 10px;
+}
+
+.hero-card:hover {
+    box-shadow: 0px 0px 10px 1000px #202020;
+    border: 1px solid #fb86006e;
+    border-radius: 10px;
+}
+
+/* atajo para crear efecto en el hover de ambos*/
+.hero-card .hero-logo {
+    opacity: 0;
+    transition: all 0.5s;
+}
+
+.hero-card:hover.hero-card .hero-link {
+    opacity: 1;
+    box-shadow: #fb86006e 0px 0px 2px 1px;
+    transition: .2s ease-out;
+}
+
+.hero-link:hover {
+    transform: scale(1.05);
+}
+
+
+/*styles del icono de fontawesome para el hover*/
+.hero-arrow {
+    opacity: 0;
+}
+
+.hero-card:hover.hero-card .hero-arrow {
+    opacity: 1;
+    text-shadow: #fb8600 0px 1px 10px;
+    transition: 1s;
+}
+
+/*animaciones auxiliares para js*/
+
+@keyframes vibe {
+    0% {
+        transform: rotateX(-15deg) translateY(0px);
+    }
+
+    50% {
+        transform: rotateX(-15deg) translateY(-10px);
+    }
+
+    100% {
+        transform: rotateX(-15deg) translateY(0px);
+    }
+}
+
+.slide-down {
+    animation: 2s slide-down;
+}
+
+.vibe {
+    animation: 2s vibe infinite ease;
+}
+
+@keyframes slide-down {
+    0% {
+        opacity: 0;
+        transform: translateY(-500px);
+    }
+
+    50% {
+        opacity: 1;
+        transform: translateY(50px);
+    }
+}
+
+.slide-up {
+    transition: all 0.3s ease;
+}
+
+@keyframes slide-up {
+    0% {
+        opacity: 0;
+        transform: translateY(5000px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0px);
+    }
+}
+
+.fluid-opacity {
+    animation: 1s fluid-opacity;
+}
+
+@keyframes fluid-opacity {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+/*---Hero Section---*/
+
+/*---Header & Nav---*/
+
+/*Nav Hovers*/
+
+.cart-toggle:hover {
+    transform: scale(1.05);
+    background: var(--card-txt-gold);
+    border: 1px solid white;
+    box-shadow: 0 0px 6px var(--card-txt-gold);
+    transition: all .3s ease-in;
+}
+
+.cart-toggle:hover .fa-shopify {
+    color: white;
+    transition: all .3s ease-in;
+}
+
+
+/*class auxiliar de js*/
+.active-link {
+    border-bottom: 1px solid var(--card-txt-gold);
+    transition: all 0.5s ease-in-out;
+}
+
+
+
+
+/*---Header & Nav---*/
+
+
+/*------ Second Hero ------*/
+
+.second-hero-container {
+    background-image: url(./assets/images/background/hero-bg-2.jpg);
+    background-size: cover;
+    transition: all 0.5s ease-out;
+}
+
+.second-hero-container:hover h2 {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.5s ease-in;
+}
+
+.second-hero-container:hover p {
+    opacity: 1;
+    transform: translateX(0px);
+    transition: all 0.5s ease-in;
+}
+
+.second-hero-container:hover img {
+    transform: translateX(0px);
+    transition: all 0.5s ease-in;
+}
+
+/*------ Second Hero ------*/
+
+/*------- Featured -------*/
+
+.featured-card:hover img {
+    filter: blur(0px);
+    transform: scale(1.05);
+    transition: transform 0.3s ease-in;
+}
+
+.featured-card:hover .featured-info {
+    opacity: 1;
+    transform: translateY(0px);
+    transition: all 0.32s ease-in;
+}
+
+/*------- Featured -------*/
+
+/*------- Footer -------*/
+
+/*iconos de font*/
+
+.footer-container {
+    transition: all 0.3s ease-out;
+}
+
+.footer-container:hover {
+    border-top: 1px solid var(--card-txt-gold);
+    transition: all 0.3s ease-in;
+}
+
+.footer-container small {
+    transition: all 0.3s ease-out;
+}
+
+.footer-container:hover small {
+    background: var(--card-txt-gold);
+    height: 1px;
+    transition: all 0.3s ease-in;
+}
+
+.fa-instagram {
+   color: var(--bg-grey); 
+}
+
+.fa-tiktok {
+   color: var(--bg-grey); 
+}
+
+.fa-whatsapp {
+   color: var(--bg-grey); 
+}
+
+/* efecto de hover en conjunto*/
+.footer-mid a:hover {
+    border: 1px solid var(--card-txt-gold);
+    transition: all 0.3s ease-in;    
+}
+
+.footer-mid a:hover i {
+    color: var(--card-txt-gold);
+    filter: drop-shadow(0 0 0.75rem var(--card-txt-gold));
+    transition: all 0.3s ease-in;
+}
+
+/*------- Footer -------*/
