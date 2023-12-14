@@ -287,11 +287,13 @@ export function Cart() {
   const dispatch = useDispatch();
   const cartItems = useSelector((state) => state.cart.items);
   const [isModalOpen, setIsModalOpen] = useState(false); //definimos el estado isModalOpen
+  const [isClearCartModalOpen, setIsClearCartModalOpen] = useState(false); //definimos el estado isClearCartModalOpen (funcion para confirmar el vaciado del carrito)
 
   const removeFromCart = (productId) => {
     dispatch(removeProductFromCart(productId));
   };
 
+  //logica para el modal al finalizar la compra
   const finalizePurchase = () => {
     setIsModalOpen(true);
     //cierra el carrito
@@ -305,6 +307,20 @@ export function Cart() {
   const handleAcceptPurchase = () => {
     dispatch(clearCart());
     setIsModalOpen(false);
+  };
+
+  // logica para el modal para vaciar el carrito
+  const handleClearCartClick = () => {
+    setIsClearCartModalOpen(true);
+  };
+
+  const handleAcceptClearCart = () => {
+    dispatch(clearCart());
+    setIsClearCartModalOpen(false);
+  };
+
+  const handleRejectClearCart = () => {
+    setIsClearCartModalOpen(false);
   };
 
   const getTotalPrice = () => {
@@ -354,11 +370,12 @@ export function Cart() {
             <p className='cart-total'>Total: ${getTotalPrice()}</p>
             <div className='summary-btns'>
               <button onClick={finalizePurchase}>Finalizar Compra</button>
-              <button onClick={() => dispatch(clearCart())}>Vaciar Carrito</button>
+              <button onClick={handleClearCartClick}>Vaciar Carrito</button>
             </div>
           </div>
         )}
       </CartContainer>
+      {/* modal de finalizar compra */}
       <ModalContainer isOpen={isModalOpen} onClose={handleModalClose}>
         <ModalContent>
           <p>¿Estás seguro de que quieres finalizar la compra?</p>
@@ -368,6 +385,17 @@ export function Cart() {
           </div>
         </ModalContent>
       </ModalContainer>
+      {/* modal de vaciar el carrito */}
+      <ModalContainer isOpen={isClearCartModalOpen} onClose={handleRejectClearCart}>
+        <ModalContent>
+          <p>¿Estás seguro de que quieres vaciar el carrito?</p>
+          <div className='modal-btn-container'>
+            <button onClick={handleAcceptClearCart}>Aceptar</button>
+            <button onClick={handleRejectClearCart}>Rechazar</button>
+          </div>
+        </ModalContent>
+      </ModalContainer>
+
     </>
   );
 }
