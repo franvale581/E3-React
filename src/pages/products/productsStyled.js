@@ -142,10 +142,10 @@ export const ProductsContainer = styled.div`
     grid-template-columns: repeat(3, 1fr);
     gap: 5rem;
 
-@media (max-width: 1160px) {
+@media (max-width: 1190px) {
          grid-template-columns: repeat(2, 1fr);
 }
-@media (max-width: 751px) {
+@media (max-width: 816px) {
          grid-template-columns: repeat(1, 1fr);
 }
 
