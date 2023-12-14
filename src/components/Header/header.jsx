@@ -42,9 +42,6 @@ export function HeaderNav() {
                         <Link to="/">Home</Link>
                     </NavLink>
                     <NavLink>
-                        <a href="#featured-section">Featured</a>
-                    </NavLink>
-                    <NavLink>
                         <Link to="/products">Products</Link>
                     </NavLink>
                     <NavLink>
