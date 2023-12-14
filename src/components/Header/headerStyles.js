@@ -48,7 +48,7 @@ export const NavContainer = styled.ul`
     top: 5.8rem;
     right: 0;
     width: 100%;
-    height: 20rem;
+    height: 17rem;
     background: transparent;
     backdrop-filter: blur(40px);
     border-bottom: 2px solid var(--card-txt-gold);
@@ -57,7 +57,7 @@ export const NavContainer = styled.ul`
     border-top: 1px solid var(--card-txt-gold);
     z-index: 3;
     &:first-child {
-        padding-top: 1.5rem;
+        padding-top: 2.8rem;
     }
   }
 
