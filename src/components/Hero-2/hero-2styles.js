@@ -60,15 +60,15 @@ export const SHeroImg = styled.img`
 
 @media (max-width: 1200px) {
     transform: none;
-    height: 12rem;
+    height: 9rem;
 }
 /* tablet */ 
-@media (max-width: 740px) {
-    height: 10rem;
+@media (max-width: 785px) {
+    height: 8rem;
 }
 /* mobile */
 @media (max-width: 576px) {
-    height: 8rem;
+    height: 7rem;
 }
 `
 
@@ -77,8 +77,9 @@ export const SHeroInfoContainer = styled.div`
     display: flex;
     flex-direction: column;
     gap: 6rem;
-    align-items: start;
+    align-items: center;
     padding: 2rem;
+    text-align: center;
     & h2 {
         opacity: 0;
         transform: translateX(-300px);
@@ -100,6 +101,27 @@ export const SHeroInfoContainer = styled.div`
         transition: all 0.5s ease-out;
     }
 
+    
+    & button {
+        opacity: 0;
+        width: 8.5rem;
+        height: 2.3rem;
+        border-radius: 20px;
+        border: 1px solid white;
+        color: white;
+        background: var(--bg-dark);
+        transform: translateX(-300px);
+        transition: all 0.5s ease-out;
+        font-family: 'Cinzel', sans-serif;
+        font-size: .9rem;
+        cursor: pointer;
+        &:hover {
+            border-color: var(--card-txt-gold);
+            color: var(--card-txt-gold);
+        }
+    }
+
+
 @media (max-width: 1200px) {
     align-items: center;
     gap: 3rem;
@@ -117,6 +139,12 @@ export const SHeroInfoContainer = styled.div`
             transform: none;
             font-size: 1rem;
             text-align: center;
+        }
+
+        & button {
+            opacity: 1;
+            transform: none;
+            font-size: .7rem;
         }
 
 
@@ -145,6 +173,12 @@ export const SHeroInfoContainer = styled.div`
     }
     & p {
         font-size: 0.7rem;
+    }
+    & button {
+        width: 7rem;
+        height: 2rem;
+        font-size: 0.6rem;
+        letter-spacing: 1px;
     }
 }
 `
