@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 
 export const ContactSect = styled.section`
-    height: 200vh;
+    height: 90rem;
     width: 100%;
     display: flex;
     align-items: center;
@@ -10,7 +10,7 @@ export const ContactSect = styled.section`
     background: var(--card-hero);
 
 @media (max-width: 740px) {
-    height: 280vh;
+    height: 140rem;
 }
 
 .flip-card {
