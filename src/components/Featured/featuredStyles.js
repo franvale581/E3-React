@@ -5,11 +5,10 @@ import styled from 'styled-components'
 export const FeaturedContainer = styled.section`
 width: 100%;
 height: 900px;
-gap: 5rem;
 background: var(--card-hero);
 display: flex;
 flex-direction: column;
-justify-content: center;
+justify-content: space-between;
 align-items: center;
 user-select: none;
 
@@ -72,10 +71,13 @@ justify-content: center;
 align-items: center;
 width: 100%;
 gap: 5.5rem;
+padding-bottom: 11rem;
 
 @media (max-width: 1200px) {
     flex-direction: column;
+    padding-bottom: 6rem;
 }
+
 `
 
 export const FeaturedCard = styled.div`
