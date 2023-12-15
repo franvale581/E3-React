@@ -10,6 +10,7 @@ const CartContainer = styled.div`
   width: 20rem;
   height: calc(100vh - 5.9rem);
   background: transparent;
+  -webkit-backdrop-filter: blur(40px);
   backdrop-filter: blur(40px);
   z-index: 3;
   border-left: 2px solid var(--card-txt-gold);

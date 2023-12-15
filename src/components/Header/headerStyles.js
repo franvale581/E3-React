@@ -50,6 +50,7 @@ export const NavContainer = styled.ul`
     width: 100%;
     height: 17rem;
     background: transparent;
+    -webkit-backdrop-filter: blur(40px);
     backdrop-filter: blur(40px);
     border-bottom: 2px solid var(--card-txt-gold);
     border-bottom-left-radius: 10px;
