@@ -3,8 +3,7 @@ import BgProductsImg from '../../assets/images/background/hero-bg-2.jpg';
 
 export const ProductSection = styled.section`
     height: 100%;
-    padding: 12rem 0;
-    width: 100%; 
+    width: 100%;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -49,7 +48,7 @@ export const StyledAddedToCartModal = styled.div.withConfig({
 
 export const ProductBanner = styled.div`
     width: 100%;
-    height: 11rem;
+    height: 9.5rem;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -96,9 +95,7 @@ export const ProductBanner = styled.div`
 }
 `
 export const ProductFilters = styled.div`
-    top: 15rem;
-    position: absolute;
-    height: 4rem;
+    padding: 4rem;
     width: 100%;
     background: transparent;
     display: flex;
@@ -108,10 +105,13 @@ export const ProductFilters = styled.div`
     @media (max-width: 510px) {
         gap: 1rem;
         padding: 0 5px;
+        padding-bottom: 2rem;
 }
 @media (max-width: 380px) {
-        gap: 0.2rem;
-        padding: 0 5px;
+        gap: 1rem;
+        flex-direction: column;
+        margin-bottom: 2rem;
+        padding: 0;
 }
 `
 export const ProductFilterBtn = styled.button`
@@ -136,7 +136,6 @@ export const ProductFilterBtn = styled.button`
 `
 
 export const ProductsContainer = styled.div`
-    margin-top: -8rem;
     padding: 0 2rem 4rem 2rem;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
@@ -242,6 +241,7 @@ export const ProductsContainer = styled.div`
 export const ProductsBtnLoad = styled.button`
     height: 3rem;
     width: 10rem;
+    margin-bottom: 2rem;
     display: flex;
     align-items: center;
     justify-content: center;
