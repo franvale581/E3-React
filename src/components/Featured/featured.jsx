@@ -19,9 +19,14 @@ export function FeaturedSection() {
               <img src={BuzoVintageImg} alt="Imagen del producto" />
             </FeaturedImg>
             <FeaturedInfo className="featured-info">
-              <h2>Buzo Vintage 2000's</h2>
-              <p>Cuello redondo, talle M (55cm) en tela microfibra.</p>
-              <p>Precio: $12000</p>
+              <div className="f-info-title-container">
+                <h2>Buzo Vintage 2000's</h2>
+                <div className="featured-smallbar"></div>
+              </div>
+              <div>
+                <p>Cuello redondo, talle M (55cm) en tela microfibra.</p>
+                <p>Precio: $12000</p>
+              </div>
             </FeaturedInfo>
           </FeaturedCard>
 
@@ -31,9 +36,14 @@ export function FeaturedSection() {
               <img src={ParachuteCargoImg} alt="Imagen del producto" />
             </FeaturedImg>
             <FeaturedInfo className="featured-info">
-              <h2>Parachute Cargo</h2>
-              <p>Talle M (95cm), tela microfibra.</p>
-              <p>Precio: $15000</p>
+              <div className="f-info-title-container">
+                <h2>Parachute Cargo</h2>
+                <div className="featured-smallbar"></div>
+              </div>
+              <div>
+                <p>Talle M (95cm), tela microfibra.</p>
+                <p>Precio: $15000</p>
+              </div>
             </FeaturedInfo>
           </FeaturedCard>
 
@@ -43,9 +53,14 @@ export function FeaturedSection() {
               <img src={PolleraY2kImg} alt="Imagen del producto" />
             </FeaturedImg>
             <FeaturedInfo className="featured-info">
-              <h2>Pollera Y2K Jean</h2>
-              <p>Talle M, tela Jean.</p>
-              <p>Precio: $10000X</p>
+              <div className="f-info-title-container">
+               <h2>Pollera Y2K Jean</h2>
+                <div className="featured-smallbar"></div>
+              </div>
+              <div>
+                <p>Talle M, tela Jean.</p>
+                <p>Precio: $10000X</p>
+              </div>
             </FeaturedInfo>
           </FeaturedCard>
 

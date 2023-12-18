@@ -214,21 +214,6 @@ html {
 
 /*------ Second Hero ------*/
 
-/*------- Featured -------*/
-
-.featured-card:hover img {
-    filter: blur(0px);
-    transform: scale(1.05);
-    transition: transform 0.3s ease-in;
-}
-
-.featured-card:hover .featured-info {
-    opacity: 1;
-    transform: translateY(0px);
-    transition: all 0.32s ease-in;
-}
-
-/*------- Featured -------*/
 
 /*------- Footer -------*/
 
