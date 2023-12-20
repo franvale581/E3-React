@@ -187,7 +187,7 @@ const CartItemsContainer = styled.div`
   gap: 2rem;
   
 `
-const ModalContainer = styled.div`
+export const ModalContainer = styled.div`
   display: ${({ isOpen }) => (isOpen ? 'flex' : 'none')};
   position: fixed;
   z-index: 5;
@@ -201,7 +201,7 @@ const ModalContainer = styled.div`
   background-color: #0f0f0fc5;
 `;
 
-const ModalContent = styled.div`
+export const ModalContent = styled.div`
   background-color: var(--card-hero);
   display: flex;
   justify-content: space-around;
