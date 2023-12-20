@@ -1,7 +1,7 @@
 import styled from 'styled-components';
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
-import { removeProductFromCart, clearCart, addUnitToProduct, removeUnitFromProduct, closeCart } from '../../Redux/cartSlice';
+import { removeProductFromCart, clearCart, addUnitToProduct, removeUnitFromProduct, closeCart, setCartItems } from '../../Redux/cartSlice';
 
 const CartContainer = styled.div`
   position: fixed;
@@ -290,6 +290,19 @@ export function Cart() {
   const [isModalOpen, setIsModalOpen] = useState(false); //definimos el estado isModalOpen
   const [isClearCartModalOpen, setIsClearCartModalOpen] = useState(false); //definimos el estado isClearCartModalOpen (funcion para confirmar el vaciado del carrito)
 
+    // Guardar los items del carrito en LocalStorage
+    useEffect(() => {
+      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+    }, [cartItems]);
+  
+    // Obtener los items del carrito de LocalStorage cuando la aplicación se carga
+    useEffect(() => {
+      const savedCartItems = localStorage.getItem('cartItems');
+      if (savedCartItems) {
+        dispatch(setCartItems(JSON.parse(savedCartItems)));
+      }
+    }, []);
+  
   const removeFromCart = (productId) => {
     dispatch(removeProductFromCart(productId));
   };

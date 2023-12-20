@@ -1,10 +1,13 @@
 import { createSlice } from '@reduxjs/toolkit';
 
+// obtenemos los items del carrito de LocalStorage
+const savedCartItems = localStorage.getItem('cartItems');
+
 export const cartSlice = createSlice({
   name: 'cart',
   initialState: {
     isCartOpen: false,
-    items: [], // arreglo para almacenar los productos
+    items: savedCartItems ? JSON.parse(savedCartItems) : [], // Si existen datos guardados, úsalos. Si no, usa un arreglo vacío.
   },
   reducers: {
     toggleCart: (state) => {
@@ -44,9 +47,13 @@ export const cartSlice = createSlice({
     closeCart: (state) => {
       state.isCartOpen = false;
     },
+    // Reducer para establecer los items del carrito
+    setCartItems: (state, action) => {
+      state.items = action.payload;
+    },
   },
 });
 
-export const { toggleCart, addProductToCart, removeProductFromCart, clearCart, addUnitToProduct, removeUnitFromProduct, closeCart } = cartSlice.actions;
+export const { toggleCart, addProductToCart, removeProductFromCart, clearCart, addUnitToProduct, removeUnitFromProduct, closeCart, setCartItems } = cartSlice.actions;
 
 export default cartSlice.reducer;
