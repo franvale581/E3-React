@@ -151,7 +151,7 @@ bottom: 0;
 height: 100%;
 width: 100%;
 padding: 4rem 1.5rem 4rem 1.5rem;
-color: #e2711d;
+color: white;
 display: flex;
 flex-direction: column;
 align-items: center;
@@ -189,7 +189,17 @@ h2 {
 }
 
 p {
-  font-size: 0.8rem;
+  font-size: 0.9rem;
+  margin-bottom: 11rem;
+  font-weight: 600;
+  padding: 0 .5rem 0 .5rem;
+  letter-spacing: 2px;
+}
+
+span {
+   font-size: 0.9rem;
+   font-weight: 800;
+   letter-spacing: 4px;
 }
 /* mobile */
 @media (max-width: 576px) {

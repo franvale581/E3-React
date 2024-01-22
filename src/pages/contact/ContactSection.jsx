@@ -86,7 +86,7 @@ export const ContactSection = () => {
                             </div>
                             <div className="flip-card-back">
                                 <p className="card-title">ENVIOS</p>
-                                <p className="card-info">Se realizan envios gratis al interior de Cordoba Capital, de no ser el caso se enviara por correa a contrapago.</p>
+                                <p className="card-info">Se realizan envios gratis al interior de Cordoba Capital, de no ser el caso se enviara por correo a contrapago.</p>
                             </div>
                         </div>
                     </div>

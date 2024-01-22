@@ -24,8 +24,8 @@ export function FeaturedSection() {
                 <div className="featured-smallbar"></div>
               </div>
               <div>
-                <p>Cuello redondo, talle M (55cm) en tela microfibra.</p>
-                <p>Precio: $12000</p>
+                <p>Cuello redondo, Talle M (55cm) en tela microfibra.</p>
+                <span>Precio: $12000</span>
               </div>
             </FeaturedInfo>
           </FeaturedCard>
@@ -41,8 +41,8 @@ export function FeaturedSection() {
                 <div className="featured-smallbar"></div>
               </div>
               <div>
-                <p>Talle M (95cm), tela microfibra.</p>
-                <p>Precio: $15000</p>
+                <p>Talle M (95cm) en tela microfibra.</p>
+                <span>Precio: $15000</span>
               </div>
             </FeaturedInfo>
           </FeaturedCard>
@@ -58,8 +58,8 @@ export function FeaturedSection() {
                 <div className="featured-smallbar"></div>
               </div>
               <div>
-                <p>Talle M, tela Jean.</p>
-                <p>Precio: $10000X</p>
+                <p>Talle M en tela Jean.</p>
+                <span>Precio: $10000</span>
               </div>
             </FeaturedInfo>
           </FeaturedCard>
