@@ -34,7 +34,8 @@ export function HeaderNav() {
 
             <div className="nav-logo-container">
                 <Link to="/">
-                <NavLogo src={NavLogoImg} alt="logo" className="nav-logo" />
+                    <NavLogo src={NavLogoImg} alt="logo" className="nav-logo" />
+                </Link>
             </div>
 
             <nav >
