@@ -33,6 +33,7 @@ export function HeaderNav() {
         <HeaderStyles className="header">
 
             <div className="nav-logo-container">
+                <Link to="/">
                 <NavLogo src={NavLogoImg} alt="logo" className="nav-logo" />
             </div>
 
