@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import BgProductsImg from '../../assets/images/background/hero-bg-2.jpg';
+import BgProductsImg from '../../assets/images/background/hero-bg-2.webp';
 
 export const ProductSection = styled.section`
     height: 100%;

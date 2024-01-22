@@ -1,12 +1,12 @@
-import BuzoGround from '../products-img/buzo-ground.jpeg';
-import PantalonDeportivoGround from '../products-img/pantalon-deportivo-ground.jpeg';
-import ParachuteAzul from '../products-img/parachute-azul.jpeg';
-import ParachuteGrisPerlado from '../products-img/parachute-gris-perlado.jpeg';
-import ParachuteNegro from '../products-img/parachute-negro.jpeg';
-import ParachuteCargo from '../products-img/parachute-cargo.jpg';
-import PolleraY2K from '../products-img/pollera-Y2K-jean.jpg';
-import BuzoVintage from '../products-img/buzo-vintage-2000s.jpg';
-import BuzoCuellitoGround from '../products-img/buzo-cuellito-ground.jpeg';
+import BuzoGround from '../products-img/buzo-ground.webp';
+import PantalonDeportivoGround from '../products-img/pantalon-deportivo-ground.webp';
+import ParachuteAzul from '../products-img/parachute-azul.webp';
+import ParachuteGrisPerlado from '../products-img/parachute-gris-perlado.webp';
+import ParachuteNegro from '../products-img/parachute-negro.webp';
+import ParachuteCargo from '../products-img/parachute-cargo.webp';
+import PolleraY2K from '../products-img/pollera-Y2K-jean.webp';
+import BuzoVintage from '../products-img/buzo-vintage-2000s.webp';
+import BuzoCuellitoGround from '../products-img/buzo-cuellito-ground.webp';
 
 
 export const ProductsData = [
